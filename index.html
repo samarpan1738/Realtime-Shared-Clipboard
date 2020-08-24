@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Clipboard</title>
+    <script src="index.js" defer></script>
+    <link rel="icon" href="assets/icons8-clipboard-96.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="firebase.js" defer></script> -->
+</head>
+<body>
+    <div id="root">
+        <!-- <header>
+            <div class="inputContainer">
+                <input type="text" placeholder="Content" class="inp">
+            </div>
+            <div class="btnContainer">
+                <button class="addBtn">Add</button>
+                <button class="clear">Clear</button>
+            </div>
+        </header> -->
+        <div class="addContainer">   
+            <button class="iconContainer addBtn">
+                <img src="/assets/addIcon.png" alt="Add icon" class="addIcon">
+            </button>         
+            <input type="text" placeholder="Share something..." class="addInputBox inp">
+        </div>
+        <ul class="list">
+            <!-- <li></li> -->
+            <!-- <li class="placeholder">
+                <span>Nothing to share.</span>         
+            </li> -->
+        </ul>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        TODO: https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAqB9TrsiXlqTUXbldj9szomHGTfSsXdFw",
+        authDomain: "sharedclipboard-ec534.firebaseapp.com",
+        databaseURL: "https://sharedclipboard-ec534.firebaseio.com",
+        projectId: "sharedclipboard-ec534",
+        storageBucket: "sharedclipboard-ec534.appspot.com",
+        messagingSenderId: "427564894623",
+        appId: "1:427564894623:web:2db62846eff47b541a95aa"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    </script>
+</body>
+</html>
