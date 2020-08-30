@@ -10,250 +10,130 @@
 {
     --secondary-hover-bg:rgb(202, 202, 202);
     --accent-color:rgb(133, 219, 133);
-    --bg-layer-1:#E2E6EA;
-    --bg-layer-2:#f1f4f5;
+    /* --bg-layer-1:#E2E6EA; */
+    --bg-layer-1:white;
+    /* --bg-layer-2:#f1f4f5; */
+    --bg-layer-2:#F2F2F2;
     --link-color:rgb(27, 47, 233);
 }
-body
+div,button,input
 {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-layer-1);
-    overflow: hidden;
-    /* background-color: #242421; */
-    /* padding: em; */
+    border: 1px solid black;
 }
+
 #root
 {
-    width: 100%;
-    max-width: 600px;
-    height: 90vh;
-    /* margin-top: 3em; */
-    /* padding: 1em; */
-    padding-bottom: 1em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: var(--bg-layer-2);
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px 5px rgb(221, 218, 218);
-    /* min-height: 85%; */
-    overflow: hidden;
-    /* background-color: #aeb0b4; */
+    width:70%;
+    margin: auto;
+    padding:2em;
 }
-.addContainer
-{
-    /* width:95%; */
-    width:100%;
-    padding:1em;
-    /* background-color: var(--bg-layer-1); */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border-left: 5px solid var(--accent-color); */
-    /* border-radius: 0 8px 8px 0; */
-    background-color: #d4d6da;
-}
-.iconContainer
+
+button,input
 {
     all:unset;
-    /* border: 1px solid black; */
+}
+
+.addContainer
+{
     display: flex;
-    justify-items: center;
-    align-items: center;
-    widows: 20%;
-}
-.iconContainer:focus
-{
-    outline:none;
-}
-.addInputBox
-{
-    /* margin-left: 20%; */
-    /* margin-right: 20%; */
-    width:90%;
-    background-color: var(--bg-layer-1);
-    background-color: #d4d6da;
-    border:none;
-    border-bottom:1.2px solid black;
-    padding:0.5em 0.5em;
-    outline: none;
-    font-weight: bold;
-    font-size: 1.3rem;
-    /* all:unset; */
-}
-.list
-{
-    /* width: 0; */
-    /* background-color: #f1f4f5; */
     width: 100%;
-    overflow-y:scroll ;
-    background-color: var(--bg-layer-2);
-    /* display:flex; */
-    /* height: 100%; */
-    /* max-width: 100%; */
-    padding: 1em;
-    list-style-type: none;
-    
-}
-.list::-webkit-scrollbar { 
-    display: none; 
-}
-.list__item
-{
-    padding: 0.75em 0.5em;
-    /* display: inline-block; */
-    /* padding-left: 0.5em; */
-    width: 100%;
-    /* margin: 0; */
-    /* width: fit-content; */
-    word-wrap: break-word;
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: 1.2rem;
-    margin-bottom: 1em;
-    background-color: var(--bg-layer-1);
-    /* border-left: 5px solid var(--accent-color); */
-    border-radius: 8px;
+    margin-bottom: 1.5em;
+    padding: 0.5em 0.75em;
 }
 
-.list__item .content
+button
 {
-    /* display: ; */
-    min-height: 34px;
-    padding: 0 0.5em;
-    width: 90%;
-    /* word-wrap: break-all; */
-    line-height:40px;
-    /* line-height: 20px; */
-}
-
-
-header
-{
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    
-    /* border: 2px solid black; */
-    /* margin-bottom: 0.5em; */
-    /* justify-content: center; */
-}
-.btnContainer
-{
-    width:30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* .inp,button
-{
-    padding: 0.5em;
-    margin: 0.25em;
-} */
-.inputContainer
-{
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background: #f8fafc; */
-    /* color: white; */
-}
-/* .inp
-{
-    border-radius: 10px;
-    border: none;
-    width:85%;
-    padding:1em 0.75em;  
-      
-}
-.inp:focus
-{
-    outline: none;
-} */
-
-.placeholder
-{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 1.5rem;
-    color: grey;
-}
-a,a:visited,a:focus
-{
-    color: var(--link-color);
-    width: 100%;
-}
-.removeBtn
-{
-    width: 40px;
-    height: 40px;
+    /* padding:0 0.5em; */
+    width:40px;
+    height:40px;
+    background-color: lightgrey;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-right: 1em; */
-    position: sticky;
-    top: 10px;
-    border: none;
-    background-color: inherit;
-    transition: all 200ms ease-in-out;
+    margin:0 0.5em;
 }
-.removeBtn:hover
+
+.addInpBox
 {
-    background-color: var(--secondary-hover-bg);
-    
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width:85%;
+    padding:0.25em 0.5em;
+    border-bottom:1.5px solid black;
+    font-weight: 700;
+    /* color: black; */
 }
-.removeIcon
+
+.list
 {
-    width:22px;
-    /* background-color: #f03535; */
+    list-style-type: none;
+    width:100%;
 }
-.removeIcon:focus
+
+.list__item
 {
-    outline: none;
+    /* display: flex; */
+    position: relative;
+    /* border: 1px solid black; */
+    /* width:500px; */
 }
-/* .addBtn,.clear
+
+.top
 {
-    all:unset;
-    padding: 0.5em;
-    margin: 0.25em;
-    border:1.5px solid;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    transition: all 200ms ease-in-out;
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: 100;
+    border: 1px solid black;
 }
-.addBtn{
-    color: var(--accent-color);
-    border:1.5px solid var(--accent-color);
-    border-color: var(--accent-color);
-}
-.addBtn:hover
+
+
+.bottom
 {
-    background-color: var(--accent-color);
-    color: white;
-} */
-.clear
-{
-    background-color: var(--bg-layer-1);
-    border-color: var(--bg-layer-1);
+    /* z-index: -1; */
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    /* z-index: -1; */
 }
-.clear:hover
+
+
+.button-container
 {
-    /* background-color: #c8cbce; */
-    background-color: var(--secondary-hover-bg);
-    border-color: var(--secondary-hover-bg);
-    /* color: white; */
+    display: flex;
+    align-items: center;
+    padding:0.5em 0.75em;
 }
+
+.button-container>button
+{
+    width:50px;
+    height:50px;   
+}
+
+
+.list__item__content
+{
+    display: inline-block;
+    width: fit-content;
+    line-height: 65px;
+    padding:0 1em;
+    /* border:1px solid black; */
+}
+
+.top:hover
+{
+    /* display: none; */
+}
+
+/*  End of new sliding list__item*/
 @media screen and (max-width:600px)
 {
     #root

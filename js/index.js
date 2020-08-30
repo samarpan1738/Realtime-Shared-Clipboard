@@ -1,3 +1,4 @@
+
 let db=firebase.firestore();
 let ul=document.querySelector('.list');
 let inpBox=document.querySelector('.inp');
@@ -77,6 +78,7 @@ function renderItems()
             let li=document.createElement('li');
             li.classList.add('list__item');
             li.setAttribute('id',docId);
+            // Create and append remove btn
             let button=document.createElement('button');
             let img=document.createElement('img')
             img.src='/assets/deleteIcon.png'
@@ -93,6 +95,24 @@ function renderItems()
             }
             button.classList.add('removeBtn');
             li.appendChild(button);
+            // End
+            // Create and append copy btn
+            let copyButton=document.createElement('button');
+            let copyImg=document.createElement('img')
+            copyImg.src='/assets/copy.png'
+            copyImg.classList.add('removeIcon')
+            copyButton.appendChild(copyImg);
+            copyButton.onclick=(e)=>{
+                console.log(e.target);
+                let textToCopy = document.getElementById('');
+                //select the text in the text box
+                textToCopy.select();
+                //copy the text to the clipboard
+                document.execCommand("copy");
+            }
+            copyButton.classList.add('removeBtn');
+            li.appendChild(copyButton);
+            // End
             if(validURL(val))
             {
                 let a=document.createElement('a');
